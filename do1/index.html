@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="./index.js"></script>
+  <script>
+    let p = new Promise2((resolve, reject) => {
+      resolve(100)
+    })
+    let p2 = p.then((value) => {
+      return 100
+    }, (err) => {
+      console.log('出错了', err)
+    }).then((data) => {
+      console.log(data)
+    })
+    // p2.then((data) => {
+    //   console.log(data)
+    // }, (err) => {
+    //   console.log(err, '出错了')
+    // })
+  </script>
+</body>
+</html>
